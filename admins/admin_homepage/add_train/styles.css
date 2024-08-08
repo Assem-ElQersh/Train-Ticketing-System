@@ -1,0 +1,211 @@
+/* General styles */
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #008080;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.title {
+    text-align: center;
+    flex: 1;
+}
+
+.add-travel-button {
+    text-align: right;
+}
+
+.add-travel-button .btn,
+.back-button .btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #008080;
+    border: 1px solid #008080;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-travel-button .btn:hover,
+.back-button .btn:hover {
+    background-color: #008080;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+.main-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #008080;
+    border: 1px solid #008080;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    background-color: #008080;
+    color: white;
+}
+
+.nav select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #008080;
+    border-radius: 5px;
+}
+
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.travel-entry {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.past {
+    background-color: #ccc;
+}
+
+.future-full {
+    background-color: #ff7f7f;
+}
+
+.future-about-to-full {
+    background-color: #ffff7f;
+}
+
+.future-not-about-to-full {
+    background-color: #7fff7f;
+}
+
+.fill-percentage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #008080;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.add-travel-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 900px; /* Fixed width */
+    
+}
+
+.form__input {
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #aaa;
+    padding: 1em .5em .5em;
+    padding-left: 2em;
+    outline: none;
+    margin: 1.5em auto;
+    transition: all .5s ease;
+}
+
+.btn {
+    transition: all .5s ease;
+    width: 100%;
+    border-radius: 30px;
+    color: black;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #008080;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #008080;
+    color: #fff;
+}
+
+.travel-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  
+   
+
+    <main>
+        <div class="main-content">
+            <h1>Payment Information</h1>
+            <form id="paymentForm" onsubmit="confirmPayment(event)">
+                <input type="hidden" name="trainId" id="trainId" value="<?php echo htmlspecialchars($_GET['trainId']); ?>">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="creditCard">Credit Card Number:</label>
+                    <input type="text" id="creditCard" name="creditCard" required>
+                
+                <button type="submit" class="btn">Confirm Payment</button>
+            </form>
+        </div>
+    </main>
+
+   
+</body>
+</html>

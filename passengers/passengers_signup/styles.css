@@ -1,0 +1,300 @@
+/* General styles */
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #008080;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.title {
+    text-align: center;
+    flex: 1;
+}
+
+.add-travel-button {
+    text-align: right;
+}
+
+.add-travel-button .btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #008080;
+    border: 1px solid #008080;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-travel-button .btn:hover {
+    background-color: #008080;
+    color: white;
+}
+
+/* Navigation styles */
+.nav {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #008080;
+    border: 1px solid #008080;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    background-color: #008080;
+    color: white;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px); /* Adjust based on header and footer height */
+}
+
+.main-content {
+    position: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.main-content h1 {
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+.form__input {
+    margin-bottom: 20px;
+    text-align: left;
+    position: center;
+}
+
+.form__input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form__input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form__input input:focus {
+    border-color: #008080;
+}
+
+.btn {
+    transition: all 0.5s ease;
+    width: 100%;
+    border-radius: 30px;
+    color: black;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #008080;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    padding: 10px 20px;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #008080;
+    color: #fff;
+}
+
+/* Footer styles */
+footer {
+    background-color: #008080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+.main-content {
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .4);
+    margin: 5em auto;
+    display: flex;
+}
+
+.company_title {
+    background-color: transparent;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    font-style: italic;
+    padding: 20px;
+}
+
+.company__info {
+    background-color: antiquewhite;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.fa-android {
+    font-size: 3em;
+}
+
+@media screen and (max-width: 640px) {
+    .main-content {
+        width: 90%;
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+    .company__info {
+        display: none; /* Hide company info on small screens */
+    }
+    .login_form {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+@media screen and (min-width: 642px) and (max-width: 800px) {
+    .main-content {
+        width: 70%;
+    }
+}
+
+.login_form {
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    flex: 1; /* Take remaining space in the row */
+}
+
+form {
+    padding: 0 2em;
+}
+
+.form__input {
+    width: 100%; /* Adjusted to take full width in the form */
+    border: 0px solid transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #aaa;
+    padding: 1em .5em .5em;
+    padding-left: 2em;
+    outline: none;
+    margin: 1.5em auto;
+    transition: all .5s ease;
+}
+
+.form__input:focus {
+    border-bottom-color: #008080;
+    box-shadow: 0 0 5px rgba(0, 80, 80, .4);
+    border-radius: 4px;
+}
+
+.btn {
+    transition: all .5s ease;
+    width: 100%; /* Adjusted to take full width in the form */
+    border-radius: 30px;
+    color: black;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #008080;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #008080;
+    color: #fff;
+}
+
+.company__logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.row > h2 {
+    color: black;
+}
+
+

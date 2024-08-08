@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Train Management</title> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="styles.css"> 
+    </head> 
+    <body> 
+        <header> 
+            <div class="header-container"> 
+                <div class="logo"> <img src="logo.png" alt="Train Ticketing System Logo"> </div> 
+                <div class="title"> <h2>Train Ticketing System</h2> </div> 
+                <div class="add-travel-button"> <a href="../admin_home.html" class="btn">Home Page</a> </div> 
+            </div> 
+        </header> 
+        <main> 
+            <div class="main-content"> 
+                <div class="add-travel-form"> 
+                    <h2>Bulk Upload Trains</h2> 
+                    <form action="bulk_upload.php" method="POST" enctype="multipart/form-data"> 
+                        <input type="file" name="file" class="form__input" accept=".csv" required> 
+                        <button type="submit" name="upload" class="btn">Upload</button> </form> 
+                    </div> <div class="add-travel-form"> <h2>Add Train</h2> <form action="add_train.php" method="POST"> 
+                        <input type="number" name="train_id" class="form__input" placeholder="Train ID" required> 
+                        <input type="text" name="train_name" class="form__input" placeholder="Train Name" required> 
+                        <input type="text" name="destination" class="form__input" placeholder="Destination" required> 
+                        <input type="date" name="date" class="form__input" placeholder="Date" required> 
+                        <input type="time" name="leaving_time" class="form__input" placeholder="Leaving Time" required> 
+                        <input type="time" name="expected_arrival" class="form__input" placeholder="Expected Arrival" required> 
+                        <input type="text" name="class" class="form__input" placeholder="Class" required> 
+                        <input type="text" name="train_stops" class="form__input" placeholder="Train Stops" required> 
+                        <input type="number" name="total_seats" class="form__input" placeholder="Total Seats" required> 
+                        <input type="number" name="available_seats" class="form__input" placeholder="Available Seats" required> 
+                        <button type="submit" class="btn">Add Train</button> 
+                    </form> 
+                </div> 
+            </div> 
+        </main>
+    </body> 
+</html>

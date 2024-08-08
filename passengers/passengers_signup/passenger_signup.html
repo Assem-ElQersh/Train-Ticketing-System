@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Sign Up</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row main-content bg-success text-center">
+            <div class="col-md-4 text-center company__info">
+                <div class="company__logo">
+                    <img src="logo.png" alt="Train Ticketing System Logo">
+                </div>
+                <h4 class="company_title">Train Ticketing System</h4>
+            </div>
+        
+            <div class="login_form">
+                <form action="passenger_signup.php" method="POST">
+                    <h2>Passenger Sign Up</h2>
+                    <input type="email" name="email" class="form__input" placeholder="Email" required>
+                    <input type="text" name="name" class="form__input" placeholder="Name" required>
+                    <input type="password" name="password" class="form__input" placeholder="Password" required>
+                    <input type="password" name="password_confirm" class="form__input" placeholder="Confirm Password" required>
+                    <input type="text" name="location" class="form__input" placeholder="Location" required>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="Logo.png" alt="Logo">
+            </div>
+            <div class="title">
+                <h2>Train Ticketing System</h2>
+            </div>
+            <div class="add-travel-button">
+                <a href="add_train/add_train.html" class="btn">Add Train</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="nav">
+                <select id="status-filter">
+                    <option value="past">Past Trains</option>
+                    <option value="future-full">Future Trains (Full)</option>
+                    <option value="future-about-to-full">Future Trains (About to Full)</option>
+                    <option value="future-not-about-to-full">Future Trains (Not About to Full)</option>
+                </select>
+            </div>
+            <div class="travel-grid" id="travel-list">
+                <!-- Travel entries will be loaded here -->
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('view_travels.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('travel-list').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+
+            document.getElementById('status-filter').addEventListener('change', function() {
+                let status = this.value;
+                let travelEntries = document.querySelectorAll('.travel-entry');
+
+                travelEntries.forEach(entry => {
+                    entry.style.display = 'block'; // Reset display
+                    if (!entry.classList.contains(status)) {
+                        entry.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
